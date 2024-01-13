@@ -8,7 +8,14 @@ package com.company.methodHiding;
 
 class Animal{
 	
-	static int i = 10;;;;;;;;;;; // OK
+	static int i ;;;;;;;;;;; // OK and accepted by compiler
+			int j;;;;;;;;;;;; // OK and no syntax error
+			
+	static { // static block
+		
+		i = 10;
+		
+	}
 	
 	
 	void runs(){
@@ -73,8 +80,8 @@ class Deer extends Animal{
 		Animal A = new Animal();
 		A.runs(); //  //Animal Runs	
 		
-		Deer D = new Deer();
-		D.runs(); // Deer runs much faster than many animals
+		Deer d = new Deer();
+		d.runs(); // Deer runs much faster than many animals
 	} 
 }
 
@@ -102,6 +109,39 @@ public class StaticMethodHidingExample {
 		System.out.println("***********************************");
 		
 		animal_1.test();
+		
+		System.out.println("***********************************");
+		
+		// Accessing static variables
+		
+		System.out.println(Animal.i); // 10 ... through class name dot variable name
+		System.out.println(animal_1.i); // 10 ... through Object reference variable
+		
+		Animal.i = 15; // static variable has only one copy in Heap memory and its value is 
+		// shared across all objects and can be changed from any Object copy which is reflected in all objects..
+		
+		System.out.println(Animal.i); //15
+		
+		animal_1.i = 20;
+		System.out.println(animal_1.i); // 20
+		
+		// Accessing Instance variables ... no common copy is shared like in case of  static variable
+		
+		deer.j = 70; // value specific for this object copy only: deer
+		
+		Deer deer1 = new Deer(); // value specific for this object copy only: deer1
+		deer1.j = 80;
+		
+		System.out.println(deer.j); // 70
+		System.out.println(deer1.j); // 80
+		
+		animal_1.j = 100; // specific to this object
+		
+		Animal animal_2 = new Animal();
+		animal_2.j = 120; // value specific to this Object
+		
+		System.out.println(animal_1.j); // 100
+		System.out.println(animal_2.j); // 120
 		
 
 	}
