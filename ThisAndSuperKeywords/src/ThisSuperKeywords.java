@@ -1,9 +1,22 @@
 /*		 
-		 super dot and super(): To access immediate Parent class's variables, Parent's default
-		 and overloaded constructors, and Parent's normal and overloaded methods.
+		 this() or this(argument list or hard coded values): can be used or invoked from a constructor only
+		 that too as a first statement in that constructor. this() calls the default constructor of same class only.
+		 and this(argument list)... the overloaded constructor of same class only. Based on number of arguments, 
+		 type of arguments, order of arguments ... this(args) recognizes the relevant overloaded constructor 
+		 in the same class.
 		 
-		 this dot and this(): To access same class's variables, same class's default
-		 and overloaded constructors, and same class's normal and overloaded methods.	 
+		 
+		 super() or super(argument list or hard coded values): can be used or invoked from a constructor only
+		 that too as a first statement in that constructor. super() calls the default constructor of parent class
+		 and super(argument list)... the overloaded constructor of parent class only. Based on number of arguments, 
+		 type of arguments, order of arguments ... super(args) recognizes the relevant overloaded constructor 
+		 in the parent.
+		 
+		 super dot variable and super dot methodname(): These statements can be used anywhere and used 
+		 to access immediate Parent class's variables and Parent class's normal and overloaded methods.
+		 
+		 this dot variableName and this dot methodName(): These statements can be used anywhere and used 
+		 to access same class's variables and same class's normal and overloaded methods.
 		 
 		 */
 
@@ -76,6 +89,7 @@ class Child extends Parent{
 		
 		System.out.println("same class 3-argument overloaded constructor");
 		System.out.println(x + "  " + y + "  " + z);
+		childMethod(111, 888);
 		
 	}
 	void childMethod() {
