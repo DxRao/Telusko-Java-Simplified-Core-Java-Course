@@ -1,6 +1,9 @@
 /*
  Covariant Return Type is needed to prevent run-time ClassCastException s by eliminating the need for Type casting. 
  
+ Covariant return type assists to stay away from the confusing type casts in the class hierarchy and 
+ makes the code more usable, readable, and maintainable.
+ 
  Applicable for non-primitive return types only. ex: object reference variables
  
  Java doesn't allow the return type-based overloading, but JVM always allows return type-based 
