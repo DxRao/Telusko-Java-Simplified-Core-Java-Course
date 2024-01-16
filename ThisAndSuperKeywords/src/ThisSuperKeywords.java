@@ -12,7 +12,7 @@
 		 type of arguments, order of arguments ... super(args) recognizes the relevant overloaded constructor 
 		 in the parent.
 		 
-		 super dot variable and super dot methodname(): These statements can be used anywhere and used 
+		 super dot variable and super dot methodName(): These statements can be used anywhere and used 
 		 to access immediate Parent class's variables and Parent class's normal and overloaded methods.
 		 
 		 this dot variableName and this dot methodName(): These statements can be used anywhere and used 
