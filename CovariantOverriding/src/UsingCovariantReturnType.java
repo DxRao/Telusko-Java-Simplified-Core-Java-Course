@@ -1,5 +1,5 @@
 /*
- Covariant Return Type is needed to prevent ClassCastException s by eliminating the need for Type casting. 
+ Covariant Return Type is needed to prevent run-time ClassCastException s by eliminating the need for Type casting. 
  
  Applicable for non-primitive return types only. ex: object reference variables
  
