@@ -1,6 +1,6 @@
 /*
 
-Runtime Polymorphism requiremets:
+Runtime Polymorphism requirements:
 
 --- Parents Object Reference variable (which contains child class object's address)
 
